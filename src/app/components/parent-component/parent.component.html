@@ -1,0 +1,32 @@
+<h2>User Form</h2>
+<div class="parent">
+  <h3>Parent Component</h3>
+  <form [formGroup]="formGroup" *ngIf="formGroup">
+  <!-- Create the form -->
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="first">
+    <mat-error>Invalid</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="last">
+    <mat-error>Invalid</mat-error>
+  </mat-form-field>
+    <!-- Include the child component in the form -->
+    <app-child />
+  </form>
+
+
+
+
+
+  <div class="button-row">
+    <button mat-flat-button color="primary" (click)="submit()">Submit</button>
+    <span>Form Validity: {{ formGroup?.valid }}</span>
+    <span>Form Touched: {{ formGroup?.touched }}</span>
+  </div>
+  <div class="value">
+    <p>Value: {{ formGroup?.value | json}}</p>
+  </div>
+</div>

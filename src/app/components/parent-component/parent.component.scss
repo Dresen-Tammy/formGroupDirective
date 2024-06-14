@@ -1,0 +1,21 @@
+mat-form-field {
+  width: 100%;
+}
+
+.parent {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.button-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.value {
+  padding: 20px;
+  border: 1px solid black;
+  margin-top: 16px;
+  border-radius: 5px;
+}

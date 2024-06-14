@@ -1,0 +1,25 @@
+<div>
+  <h3>Child Component</h3>
+  <!-- Create a form with form fields-->
+  <form [formGroup]="childFormGroup" *ngIf="childFormGroup">
+
+  <!-- Include the grandchild component in the form-->
+  <app-grandchild></app-grandchild>
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <input matInput placeholder="City" formControlName="city">
+    <mat-error>Invalid</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>State</mat-label>
+    <input matInput placeholder="State" formControlName="state">
+    <mat-error>Invalid</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Zip</mat-label>
+    <input matInput placeholder="Zip" formControlName="zip">
+    <mat-error>Invalid</mat-error>
+  </mat-form-field>
+ 
+</form>
+</div>
